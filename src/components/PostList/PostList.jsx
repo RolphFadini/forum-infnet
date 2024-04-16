@@ -1,19 +1,18 @@
-import React, { useState } from "react";
-import { PostCard } from "../PostCard/PostCard";
-import postsMockedFromServer from "../../posts";
+import React from "react";
+import PostCard from "../PostCard/PostCard";
 
-export const PostList = () => {
-	const [postsData, setPostsData] = useState(postsMockedFromServer);
-
+const PostList = ({ posts }) => {
 	return (
 		<div>
-			{postsData.map((data) => (
+			{posts.map((post) => (
 				<PostCard
-					key={data.id}
-					title={data.title}
-					description={data.description}
+					key={post.id}
+					title={post.name}
+					description={post.description}
 				/>
 			))}
 		</div>
 	);
 };
+
+export default PostList;
