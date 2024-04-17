@@ -7,11 +7,11 @@ function AppRoutes() {
 		<BrowserRouter>
 			<Routes>
 				<Route
-					path="/"
+					path="forum-infnet/"
 					element={<Home />}
 				/>
 				<Route
-					path="/topics"
+					path="forum-infnet/topics"
 					element={<PostsListPage />}
 				/>
 			</Routes>
