@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PostsList from "../components/PostList/PostList";
+import Header from "../components/Header/Header";
 
 const PostsListPage = () => {
 	const [posts, setPosts] = useState([]);
@@ -32,6 +33,7 @@ const PostsListPage = () => {
 
 	return (
 		<div>
+			<Header />
 			<h1>Lista de Tópicos</h1>
 			{loading ? <p>Carregando...</p> : <PostsList posts={posts} />}
 		</div>
