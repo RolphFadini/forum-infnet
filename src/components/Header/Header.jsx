@@ -5,13 +5,13 @@ import styles from "./Header.module.css";
 const Header = () => {
 	return (
 		<div className={styles.header}>
-			<Link to="/">
+			<Link to="/forum-infnet">
 				<span>ForumInfet</span>
 			</Link>
 
 			<nav>
-				<Link to="/">Home</Link>
-				<Link to="/topics">Topics</Link>
+				<Link to="/forum-infnet">Home</Link>
+				<Link to="/forum-infnet/topics">Topics</Link>
 			</nav>
 		</div>
 	);
