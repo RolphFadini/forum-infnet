@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import PostsListPage from "./pages/PostsListPage";
+import AppRoutes from "./routes";
 
 function App() {
 	return (
 		<>
-			<PostsListPage />
+			<AppRoutes />
 		</>
 	);
 }
