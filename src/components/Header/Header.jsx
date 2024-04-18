@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<div className={styles.header}>
 			<Link to="/forum-infnet">
-				<span>ForumInfet</span>
+				<span>Forum Infet</span>
 			</Link>
 
 			<nav>
