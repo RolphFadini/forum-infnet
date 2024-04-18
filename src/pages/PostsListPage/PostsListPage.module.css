@@ -1,0 +1,30 @@
+.topics {
+	padding: 1rem 2rem;
+	/* border-left: 1px rgba(255, 255, 255, 0.123) solid; */
+	width: 50%;
+	margin: 0 auto;
+}
+
+.topics .title {
+	font-size: 51px;
+}
+
+.topics h1 {
+	font-size: 24px;
+	transition: ease 0.25s color;
+}
+
+.topics div {
+	margin-top: 50px;
+	border: 1px rgba(255, 255, 255, 0.123) solid;
+	border-radius: 10px;
+}
+
+.topics > div {
+	border: none;
+}
+
+.topics h1:hover {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.425);
+}
