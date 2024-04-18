@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import PostsList from "../components/PostList/PostList";
-import Header from "../components/Header/Header";
+import PostsList from "../../components/PostList/PostList";
+import Header from "../../components/Header/Header";
+import styles from "./PostsListPage.module.css";
 
 const PostsListPage = () => {
 	const [posts, setPosts] = useState([]);
@@ -18,7 +19,7 @@ const PostsListPage = () => {
 				const modifiedData = data.slice(0, 10).map((event) => ({
 					id: event.id,
 					name: event.name,
-					description: event.description,
+					description: event.description.slice(0, 60) + "...",
 				}));
 				setPosts(modifiedData);
 				setLoading(false);
@@ -34,8 +35,10 @@ const PostsListPage = () => {
 	return (
 		<div>
 			<Header />
-			<h1>Lista de Tópicos</h1>
-			{loading ? <p>Carregando...</p> : <PostsList posts={posts} />}
+			<div className={styles.topics}>
+				<h2 className={styles.title}>Lista de Tópicos</h2>
+				{loading ? <p>Carregando...</p> : <PostsList posts={posts} />}
+			</div>
 		</div>
 	);
 };
