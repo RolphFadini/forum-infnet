@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/HomePage";
-import PostsListPage from "./pages/PostsListPage";
+import Home from "./pages/HomePage/HomePage";
+import PostsListPage from "./pages/PostsListPage/PostsListPage";
 
 function AppRoutes() {
 	return (
