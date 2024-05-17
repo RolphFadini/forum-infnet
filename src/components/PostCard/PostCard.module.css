@@ -1,0 +1,15 @@
+.card {
+	max-width: 600px;
+	min-width: 400px;
+	transition: ease 0.55s all;
+	padding: 10px;
+}
+
+.card a {
+	color: inherit !important;
+}
+
+.card:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.062);
+}
