@@ -1,12 +1,14 @@
 import React from "react";
+import styles from "./PostCard.module.css";
+import { Link } from "react-router-dom";
 
-const PostCard = ({ title, description }) => {
+export const PostCard = ({ id, title, description }) => {
 	return (
-		<div>
-			<h1 onClick={() => alert(title)}>{title}</h1>
-			<p>{description}</p>
+		<div className={styles.card}>
+			<Link to={`/forum-infnet/posts/${id}`}>
+				<h1>{title}</h1>
+				<p>{description}</p>
+			</Link>
 		</div>
 	);
 };
-
-export default PostCard;
