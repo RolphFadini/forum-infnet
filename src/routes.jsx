@@ -1,21 +1,28 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/HomePage/HomePage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
 import PostsListPage from "./pages/PostsListPage/PostsListPage";
+import PostPage from "./pages/PostPage/PostPage";
+import Header from "./components/Header/Header";
 
 function AppRoutes() {
 	return (
-		<BrowserRouter>
+		<Router>
+			<Header />
 			<Routes>
 				<Route
-					path="forum-infnet/"
-					element={<Home />}
+					path="/forum-infnet"
+					element={<HomePage />}
 				/>
 				<Route
-					path="forum-infnet/topics"
+					path="/forum-infnet/topics"
 					element={<PostsListPage />}
 				/>
+				<Route
+					path="/forum-infnet/posts/:id"
+					element={<PostPage />}
+				/>
 			</Routes>
-		</BrowserRouter>
+		</Router>
 	);
 }
 
