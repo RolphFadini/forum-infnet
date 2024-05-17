@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PostsList from "../../components/PostList/PostList";
-import Header from "../../components/Header/Header";
 import styles from "./PostsListPage.module.css";
 
-const PostsListPage = () => {
+export const PostsListPage = () => {
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -16,7 +15,7 @@ const PostsListPage = () => {
 				}
 				const data = await response.json();
 
-				const modifiedData = data.slice(0, 10).map((event) => ({
+				const modifiedData = data.map((event) => ({
 					id: event.id,
 					name: event.name,
 					description: event.description.slice(0, 60) + "...",
@@ -34,7 +33,6 @@ const PostsListPage = () => {
 
 	return (
 		<div>
-			<Header />
 			<div className={styles.topics}>
 				<h2 className={styles.title}>Lista de Tópicos</h2>
 				{loading ? <p>Carregando...</p> : <PostsList posts={posts} />}
@@ -42,5 +40,3 @@ const PostsListPage = () => {
 		</div>
 	);
 };
-
-export default PostsListPage;
