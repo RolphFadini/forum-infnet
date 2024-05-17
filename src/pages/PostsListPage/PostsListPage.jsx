@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PostsList from "../../components/PostList/PostList";
 import styles from "./PostsListPage.module.css";
 
-export const PostsListPage = () => {
+const PostsListPage = () => {
 	const [posts, setPosts] = useState([]);
 	const [loading, setLoading] = useState(true);
 
@@ -40,3 +40,5 @@ export const PostsListPage = () => {
 		</div>
 	);
 };
+
+export default PostsListPage;
