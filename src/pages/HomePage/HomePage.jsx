@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./HomePage.module.css";
 
-export const Home = () => {
+const Home = () => {
 	return (
 		<div className={styles.welcomeSection}>
 			<h2>Home</h2>
@@ -9,3 +9,5 @@ export const Home = () => {
 		</div>
 	);
 };
+
+export default Home;

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PostCard.module.css";
 import { Link } from "react-router-dom";
 
-export const PostCard = ({ id, title, description }) => {
+const PostCard = ({ id, title, description }) => {
 	return (
 		<div className={styles.card}>
 			<Link to={`/forum-infnet/posts/${id}`}>
@@ -12,3 +12,5 @@ export const PostCard = ({ id, title, description }) => {
 		</div>
 	);
 };
+
+export default PostCard;
