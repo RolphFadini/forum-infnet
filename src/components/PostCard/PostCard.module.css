@@ -3,6 +3,8 @@
 	min-width: 400px;
 	transition: ease 0.55s all;
 	padding: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .card a {
@@ -12,4 +14,19 @@
 .card:hover {
 	cursor: pointer;
 	background-color: rgba(255, 255, 255, 0.062);
+}
+
+.deleteButton {
+	background-color: #f44336;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: ease 0.55s all;
+	width: fit-content;
+	margin: 0 10px;
+}
+
+.deleteButton:hover {
+	background-color: #cc0000;
 }
