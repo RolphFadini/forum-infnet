@@ -8,6 +8,7 @@
 
 .topics .title {
 	font-size: 51px;
+	margin-bottom: 0;
 }
 
 .topics h1 {
@@ -26,4 +27,27 @@
 
 .topics > div {
 	border: none;
+}
+
+.searchBar {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.searchIcon {
+	background-color: white;
+}
+
+.searchInput {
+	min-width: 300px;
+	height: 30px;
+	transition: all 0.55s ease;
+	border: 1px solid rgba(255, 255, 255, 0.123);
+	right: 0;
+	margin: 20px;
+}
+
+.searchInput:hover {
+	border-color: rgba(255, 255, 255, 0.384);
 }
