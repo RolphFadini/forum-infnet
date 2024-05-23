@@ -1,7 +1,7 @@
 import React from "react";
 import PostCard from "../PostCard/PostCard";
 
-const PostList = ({ posts }) => {
+const PostList = ({ posts, onDelete }) => {
 	return (
 		<div>
 			{posts.map((post) => (
@@ -10,6 +10,7 @@ const PostList = ({ posts }) => {
 					id={post.id}
 					title={post.name}
 					description={post.description}
+					onDelete={onDelete}
 				/>
 			))}
 		</div>
