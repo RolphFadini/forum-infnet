@@ -1,5 +1,4 @@
 .card {
-	max-width: 600px;
 	min-width: 400px;
 	transition: ease 0.55s all;
 	padding: 10px;
@@ -29,4 +28,10 @@
 
 .deleteButton:hover {
 	background-color: #cc0000;
+}
+
+@media (max-width: 900px) {
+	.card {
+		min-width: 200px;
+	}
 }
