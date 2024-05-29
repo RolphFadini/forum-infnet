@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import styles from "./PostPage.module.css";
 
 const PostPage = () => {
 	const { id } = useParams();
@@ -34,7 +35,7 @@ const PostPage = () => {
 	}
 
 	return (
-		<div>
+		<div className={styles.container}>
 			<h1>{post.name}</h1>
 			<p>Tipo: {post.type}</p>
 			<p>Descrição: {post.description}</p>
