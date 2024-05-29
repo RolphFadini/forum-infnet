@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import PostsList from "../../components/PostList/PostList";
 import styles from "./PostsListPage.module.css";
 import Pagination from "../../components/Pagination/Pagination";
-import { IoSearchSharp } from "react-icons/io5";
 
 const PostsListPage = () => {
 	const [posts, setPosts] = useState([]);
@@ -10,7 +9,6 @@ const PostsListPage = () => {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [allPosts, setAllPosts] = useState([]);
 	const [searchTerm, setSearchTerm] = useState("");
-	const [noResults, setNoResults] = useState(false);
 
 	const postsPerPage = 10;
 
