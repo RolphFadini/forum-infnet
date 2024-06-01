@@ -10,8 +10,8 @@ const PostCard = ({ id, title, description, onDelete }) => {
 	return (
 		<div className={styles.card}>
 			<Link to={`/forum-infnet/posts/${id}`}>
-				<h1>{title}</h1>
-				<p>{description}</p>
+				<h1 data-testid="title">{title}</h1>
+				<p data-testid="description">{description}</p>
 			</Link>
 			<button
 				onClick={handleDelete}
