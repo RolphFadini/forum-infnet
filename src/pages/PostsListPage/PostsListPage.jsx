@@ -75,6 +75,7 @@ const PostsListPage = () => {
 			<div className={styles.searchBar}>
 				<input
 					type="text"
+					data-testid="inputSearch"
 					value={searchTerm}
 					onChange={handleSearchChange}
 					placeholder="Buscar por nome do tópico..."
@@ -98,6 +99,7 @@ const PostsListPage = () => {
 							<p>Nenhum tópico com este nome encontrado.</p>
 						) : (
 							<PostsList
+								data-testid="post_list"
 								posts={currentPosts}
 								onDelete={handleDelete}
 							/>
